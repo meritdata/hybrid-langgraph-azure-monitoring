@@ -1,0 +1,29 @@
+[project]
+name = "azure-hybrid-rag-langgraph-workflow"
+version = "0.1.0"
+description = "Hybrid RAG workflow on Azure with LangGraph, Elasticsearch, Chroma, and Azure OpenAI."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic-settings>=2.0.0",
+  "pydantic>=2.0.0",
+  "langchain-openai",
+  "langgraph",
+  "chromadb",
+  "elasticsearch",
+  "opencensus-ext-azure",
+  "tenacity",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E203", "W503"]
+src = ["src"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = false
